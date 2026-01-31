@@ -66,10 +66,9 @@ img {
   transform: scale(1);
 }
 
-/* Fuente Austral Sans Stamp Thin */
 @font-face {
   font-family: "Austral Sans Stamp Thin";
-  src: url("/src/assets/fonts/AustralSansStampThin.otf") format("opentype");
+  src: url("../assets/fonts/AustralSansStampThin.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
