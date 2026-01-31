@@ -1,0 +1,76 @@
+:root {
+  --color-bg: #0A1A2F;
+  --color-bg-alt: #112A45;
+  --color-accent: #C9A86A;
+  --color-text: #F5F5F5;
+  --color-text-secondary: #C7C7C7;
+
+  /* Fuente principal de toda la app */
+  --font-title: "Austral Sans Stamp Thin", sans-serif;
+  --font-body: "Austral Sans Stamp Thin", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente global */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  color: var(--color-text);
+}
+
+/* Links */
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Animaciones Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.9s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-img {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: 1s ease;
+}
+
+.revealed.reveal-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fuente Austral Sans Stamp Thin */
+@font-face {
+  font-family: "Austral Sans Stamp Thin";
+  src: url("/src/assets/fonts/AustralSansStampThin.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

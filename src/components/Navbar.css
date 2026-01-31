@@ -1,0 +1,125 @@
+.navbar {
+  width: 100%;
+  padding: 18px 0;
+  background: rgba(10, 26, 47, 0.75); /* azul profundo con transparencia */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201, 168, 106, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  overflow: hidden;
+}
+
+/* Glow dorado arriba */
+.navbar-glow {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 120%;
+  height: 120px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at top,
+    rgba(201, 168, 106, 0.25),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-family: var(--font-title);
+  font-size: 1.7rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.85;
+}
+
+/* LINKS */
+.navbar-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  position: relative;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+}
+
+/* Subrayado dorado animado */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--color-accent);
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Estado activo */
+.nav-item.active {
+  color: var(--color-accent);
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-logo {
+    font-size: 1.4rem;
+  }
+}
+
+.logo-img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-round {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 8px rgba(201, 168, 106, 0.3);
+  transition: 0.3s ease;
+}
+
+.logo-round:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(201, 168, 106, 0.5);
+}

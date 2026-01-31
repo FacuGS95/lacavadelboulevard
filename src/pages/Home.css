@@ -1,0 +1,112 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Textura premium */
+.hero-texture {
+  position: absolute;
+  inset: 0;
+  background-image: url("/texture-noise.png");
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Degradado cinematográfico */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 26, 47, 0.4),
+    rgba(10, 26, 47, 0.85)
+  );
+  pointer-events: none;
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--color-text);
+  z-index: 2;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Botón premium */
+.hero-button {
+  padding: 14px 34px;
+  background-color: var(--color-accent);
+  color: #0A1A2F;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 14px rgba(201, 168, 106, 0.3);
+}
+
+.hero-button:hover {
+  background-color: #d8b77c;
+  box-shadow: 0 6px 18px rgba(201, 168, 106, 0.45);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    padding: 12px 26px;
+  }
+}
+
+.hero {
+  background-attachment: fixed;
+}
+.hero {
+  background-position: center calc(50% + var(--scroll-offset));
+}
