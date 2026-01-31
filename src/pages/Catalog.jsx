@@ -1,23 +1,24 @@
 import "./Catalog.css";
+import { Link } from "react-router-dom";
 
 export default function Catalog() {
   const productos = [
     {
       id: 1,
       nombre: "Malbec Reserva",
-      imagen: "/vino1.png",
+      imagen: "/lacavadelboulevard/vino1.png",
       precio: "$12.500",
     },
     {
       id: 2,
       nombre: "Cabernet Sauvignon",
-      imagen: "/vino2.png",
+      imagen: "/lacavadelboulevard/vino2.png",
       precio: "$15.900",
     },
     {
       id: 3,
       nombre: "Blend Premium",
-      imagen: "/vino3.png",
+      imagen: "/lacavadelboulevard/vino3.png",
       precio: "$18.200",
     },
   ];
@@ -37,9 +38,10 @@ export default function Catalog() {
             <div className="card-info">
               <h3 className="card-name">{p.nombre}</h3>
               <p className="card-price">{p.precio}</p>
-              <a href={`/producto/${p.id}`} className="card-button">
+
+              <Link to={`/producto/${p.id}`} className="card-button">
                 Ver más
-              </a>
+              </Link>
             </div>
           </div>
         ))}

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { vinos } from "../data/vinos";
+import { Link } from "react-router-dom";
 import "./ProductDetail.css";
 
 export default function ProductDetail() {
@@ -33,9 +34,9 @@ export default function ProductDetail() {
             <p><strong>Maridaje:</strong> {producto.maridaje}</p>
           </div>
 
-          <a href="/contacto" className="product-button">
+          <Link to="/contacto" className="product-button">
             Consultar disponibilidad
-          </a>
+          </Link>
         </div>
 
       </div>

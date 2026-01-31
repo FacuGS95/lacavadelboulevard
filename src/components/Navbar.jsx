@@ -8,8 +8,9 @@ export default function Navbar() {
 
                 {/* LOGO */}
                 <Link to="/" className="navbar-logo">
-                    <img src="../public/logo.png" alt="La Cava del Boulevard" className="logo-round" />
+                  <img src="/lacavadelboulevard/logo.png" alt="La Cava del Boulevard" className="logo-round" />
                 </Link>
+
                 {/* LINKS */}
                 <div className="navbar-links">
                     <NavLink to="/" className="nav-item">Inicio</NavLink>

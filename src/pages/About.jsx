@@ -24,7 +24,7 @@ export default function About() {
         </div>
 
         <div className="about-image-block reveal">
-  <img src="./public/lacavadelboulevard.jpeg" alt="Bar de Vinos" className="about-image" />
+   <img src="/lacavadelboulevard/lacavadelboulevard.jpeg" alt="Vinos" className="about-image" />
 </div>
 
         <div className="about-section">
@@ -37,7 +37,7 @@ export default function About() {
         </div>
 
         <div className="about-image-block">
-          <img src="/nosotros2.jpg" alt="Vinos" className="about-image" />
+          <img src="/lacavadelboulevard/lacavadelboulevard.jpeg" alt="Vinos" className="about-image" />
         </div>
 
         {/* VALORES */}

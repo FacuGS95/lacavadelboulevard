@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -12,9 +13,9 @@ export default function Home() {
           Donde cada botella cuenta una historia.
         </p>
 
-        <a href="/catalogo" className="hero-button">
+        <Link to="/catalogo" className="hero-button">
           Explorar catálogo
-        </a>
+        </Link>
       </div>
     </section>
   );
